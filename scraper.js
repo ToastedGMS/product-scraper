@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+import { timeout } from 'puppeteer';
 
 /////////////////////////////////////////////////////////////////
 //o mapa vai conter o titulo do produto e seu numero de referencia
@@ -13,6 +14,7 @@ const coffeeReferenceArray = [
 	{ brand: 'cafe_fino_grao_500g_tradicional', reference: 93567 },
 	{ brand: 'cafe_pilao_500g_extraforte', reference: 184636 },
 	{ brand: 'cafe_barao_500g_extraforte', reference: 105089 },
+	{ brand: 'fake_product_test', reference: 999999999 },
 ];
 
 const riceReferenceArray = [
@@ -33,26 +35,34 @@ const beansReferenceArray = [
 ];
 
 async function getPrice(page, brand, reference) {
-	await page.goto(`https://www.supernosso.com/${reference}`, {
-		waitUntil: 'domcontentloaded',
-	});
+	try {
+		await page.goto(`https://www.supernosso.com/${reference}`, {
+			waitUntil: 'domcontentloaded',
+			timeout: 15000,
+		});
 
-	const price = await page.evaluate(() => {
-		const priceElement = document.querySelector(
-			'.vtex-product-price-1-x-currencyContainer'
-		);
-		const titleElement = document.querySelector(
-			'.vtex-store-components-3-x-productBrand'
-		);
-		return {
-			Product: titleElement
-				? titleElement.innerText.trim()
-				: 'Product title not found.',
-			Price: priceElement ? priceElement.innerText.trim() : 'Price not found.',
-		};
-	});
-	console.log('Loading products...');
-	return { brand, ...price };
+		const price = await page.evaluate(() => {
+			const priceElement = document.querySelector(
+				'.vtex-product-price-1-x-currencyContainer'
+			);
+			const titleElement = document.querySelector(
+				'.vtex-store-components-3-x-productBrand'
+			);
+			return {
+				Product: titleElement
+					? titleElement.innerText.trim()
+					: 'Product title not found.',
+				Price: priceElement
+					? priceElement.innerText.trim()
+					: 'Price not found.',
+			};
+		});
+		console.log('Loading products...');
+		return { brand, ...price };
+	} catch (error) {
+		console.error(`Error fetching ${brand}:`, error.message);
+		return { brand, Product: 'Error', Price: 'Error' };
+	}
 }
 
 async function scrapeAll() {
@@ -88,7 +98,7 @@ async function scrapeAll() {
 	console.log(allPrices);
 	await browser.close();
 	console.log(
-		'Os preços dos cafés do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
+		'Obs: Os preços dos cafés do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
 	);
 
 	return allPrices;
