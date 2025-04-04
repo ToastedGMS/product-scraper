@@ -7,12 +7,29 @@ import puppeteer from 'puppeteer';
 //the reference value is retrieved from the supernosso supermarket website
 /////////////////////////////////////////////////////////////////
 
-const referenceArray = [
+const coffeeReferenceArray = [
 	{ brand: 'cafe_tres_coracoes_500g_tradicional', reference: 323 },
 	{ brand: 'cafe_melitta_500g_tradicional', reference: 175314 },
 	{ brand: 'cafe_fino_grao_500g_tradicional', reference: 93567 },
 	{ brand: 'cafe_pilao_500g_extraforte', reference: 184636 },
 	{ brand: 'cafe_barao_500g_extraforte', reference: 105089 },
+];
+
+const riceReferenceArray = [
+	{ brand: 'arroz_tia_ju_tipo1_5kg', reference: 10705 },
+	{ brand: 'arroz_branco_prato_fino_tipo1_5kg', reference: 7440 },
+	{ brand: 'arroz_branco_camil_tipo1_5kg', reference: 3090 },
+	{ brand: 'arroz_polido_pilecco_nobre_tipo1_5kg', reference: 107899 },
+	{ brand: 'arroz_tio_joao_tipo1_5kg', reference: 5151 },
+];
+
+const beansReferenceArray = [
+	{ brand: 'feijao_carioca_pacha_1kg', reference: 159768 },
+	{ brand: 'feijao_preto_pacha_1kg', reference: 159769 },
+	{ brand: 'feijao_carioca_galante_1kg', reference: 6089 },
+	{ brand: 'feijao_preto_galante_1kg', reference: 151206 },
+	{ brand: 'feijao_carioca_vasconcelos_1kg', reference: 220243 },
+	{ brand: 'feijao_preto_vasconcelos_1kg', reference: 220335 },
 ];
 
 async function getPrice(page, brand, reference) {
@@ -34,8 +51,7 @@ async function getPrice(page, brand, reference) {
 			Price: priceElement ? priceElement.innerText.trim() : 'Price not found.',
 		};
 	});
-
-	console.log(`${brand}`, price);
+	console.log('Loading products...');
 	return { brand, ...price };
 }
 
@@ -48,17 +64,34 @@ async function scrapeAll() {
 
 	const page = await browser.newPage();
 
-	const results = [];
-	for (const item of referenceArray) {
+	const coffeeResults = [];
+	for (const item of coffeeReferenceArray) {
 		const data = await getPrice(page, item.brand, item.reference);
-		results.push(data);
+		coffeeResults.push(data);
+	}
+	const riceResults = [];
+	for (const item of riceReferenceArray) {
+		const data = await getPrice(page, item.brand, item.reference);
+		riceResults.push(data);
+	}
+	const beansResults = [];
+	for (const item of beansReferenceArray) {
+		const data = await getPrice(page, item.brand, item.reference);
+		beansResults.push(data);
 	}
 
+	const allPrices = {
+		coffee: coffeeResults,
+		rice: riceResults,
+		beans: beansResults,
+	};
+	console.log(allPrices);
 	await browser.close();
 	console.log(
-		'O preço dos cafés do tipo extraforte e tradicional é igual e por isso seus valores sao requisitados juntos.'
+		'Os preços dos cafés do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
 	);
-	return results;
+
+	return allPrices;
 }
 
 scrapeAll();
