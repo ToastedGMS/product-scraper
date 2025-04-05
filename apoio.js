@@ -58,7 +58,7 @@ async function getPrice(brand, SKU) {
 	}
 }
 
-async function scrapeAll() {
+export default async function scrapeAll() {
 	const coffeeResults = [];
 	for (const item of coffeeSKUArray) {
 		const data = await getPrice(item.brand, item.SKU);
@@ -86,6 +86,5 @@ async function scrapeAll() {
 	console.log(
 		'Obs: Os preços dos cafés do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
 	);
+	return allPrices;
 }
-
-scrapeAll();

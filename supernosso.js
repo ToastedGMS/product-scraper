@@ -65,7 +65,7 @@ async function getPrice(page, brand, reference) {
 	}
 }
 
-async function scrapeAll() {
+export default async function scrapeAll() {
 	const browser = await puppeteer.launch({
 		executablePath: '/usr/bin/chromium-browser',
 		headless: 'new',
@@ -103,5 +103,3 @@ async function scrapeAll() {
 
 	return allPrices;
 }
-
-scrapeAll();
