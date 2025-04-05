@@ -82,7 +82,6 @@ export default async function scrapeAll() {
 		rice: riceResults,
 		beans: beansResults,
 	};
-	console.log(allPrices);
 	console.log(
 		'Obs: Os preços dos cafés do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
 	);

@@ -57,7 +57,6 @@ async function getPrice(page, brand, reference) {
 					: 'Price not found.',
 			};
 		});
-		console.log('Loading products...');
 		return { brand, ...price };
 	} catch (error) {
 		console.error(`Error fetching ${brand}:`, error.message);
@@ -95,7 +94,6 @@ export default async function scrapeAll() {
 		rice: riceResults,
 		beans: beansResults,
 	};
-	console.log(allPrices);
 	await browser.close();
 	console.log(
 		'Obs: Os preços dos cafés do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
