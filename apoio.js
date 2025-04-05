@@ -16,6 +16,22 @@ const coffeeSKUArray = [
 	{ brand: 'fake_product_test', SKU: 999999999 },
 ];
 
+const riceSKUArray = [
+	{ brand: 'arroz_tia_ju_tipo1_5kg', SKU: 20960 },
+	{ brand: 'arroz_branco_prato_fino_tipo1_5kg', SKU: 10487 },
+	{ brand: 'arroz_branco_camil_tipo1_5kg', SKU: 8140 },
+	{ brand: 'arroz_polido_pilecco_nobre_tipo1_5kg', SKU: 597 },
+	{ brand: 'arroz_tio_joao_tipo1_5kg', SKU: 7931 },
+];
+
+const beansSKUArray = [
+	{ brand: 'feijao_carioca_pacha_1kg', SKU: 14495 },
+	{ brand: 'feijao_preto_pacha_1kg', SKU: 13081 },
+	{ brand: 'feijao_carioca_galante_1kg', SKU: 8159 },
+	{ brand: 'feijao_carioca_vasconcelos_1kg', SKU: 125316 },
+	{ brand: 'feijao_preto_vasconcelos_1kg', SKU: 123692 },
+];
+
 async function getPrice(brand, SKU) {
 	try {
 		const response = await fetch(
@@ -43,13 +59,30 @@ async function getPrice(brand, SKU) {
 }
 
 async function scrapeAll() {
-	const result = [];
+	const coffeeResults = [];
 	for (const item of coffeeSKUArray) {
 		const data = await getPrice(item.brand, item.SKU);
-		result.push(data);
+		coffeeResults.push(data);
 	}
 
-	console.log(result);
+	const riceResults = [];
+	for (const item of riceSKUArray) {
+		const data = await getPrice(item.brand, item.SKU);
+		riceResults.push(data);
+	}
+
+	const beansResults = [];
+	for (const item of beansSKUArray) {
+		const data = await getPrice(item.brand, item.SKU);
+		beansResults.push(data);
+	}
+
+	const allPrices = {
+		coffee: coffeeResults,
+		rice: riceResults,
+		beans: beansResults,
+	};
+	console.log(allPrices);
 	console.log(
 		'Obs: Os preços dos cafés do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
 	);
