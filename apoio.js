@@ -11,8 +11,8 @@ const coffeeSKUArray = [
 	{ brand: 'cafe_tres_coracoes_500g_tradicional', SKU: 7645 },
 	{ brand: 'cafe_melitta_500g_tradicional', SKU: 5583 },
 	{ brand: 'cafe_fino_grao_500g_tradicional', SKU: 7618 },
-	{ brand: 'cafe_pilao_500g_tradicional', SKU: 6791 },
-	{ brand: 'cafe_barao_500g_tradicional', SKU: 10420 },
+	{ brand: 'cafe_pilao_500g_tradicional/extraforte', SKU: 6791 },
+	{ brand: 'cafe_barao_500g_tradicional/extraforte', SKU: 10420 },
 	{ brand: 'fake_product_test', SKU: 999999999 },
 ];
 

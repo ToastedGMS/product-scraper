@@ -5,8 +5,8 @@ const coffeeBrandArray = [
 	{ brand: 'cafe_tres_coracoes_500g_tradicional' },
 	{ brand: 'cafe_melitta_500g_tradicional' },
 	{ brand: 'cafe_fino_grao_500g_tradicional' },
-	{ brand: 'cafe_pilao_500g_tradicional' },
-	{ brand: 'cafe_barao_500g_tradicional' },
+	{ brand: 'cafe_pilao_500g_tradicional/extraforte' },
+	{ brand: 'cafe_barao_500g_tradicional/extraforte' },
 	{ brand: 'fake_product_test' },
 ];
 

@@ -12,8 +12,8 @@ const coffeeReferenceArray = [
 	{ brand: 'cafe_tres_coracoes_500g_tradicional', reference: 323 },
 	{ brand: 'cafe_melitta_500g_tradicional', reference: 175314 },
 	{ brand: 'cafe_fino_grao_500g_tradicional', reference: 93567 },
-	{ brand: 'cafe_pilao_500g_extraforte', reference: 184636 },
-	{ brand: 'cafe_barao_500g_extraforte', reference: 105089 },
+	{ brand: 'cafe_pilao_500g_tradicional/extraforte', reference: 184636 },
+	{ brand: 'cafe_barao_500g_tradicional/extraforte', reference: 105089 },
 	{ brand: 'fake_product_test', reference: 999999999 },
 ];
 
