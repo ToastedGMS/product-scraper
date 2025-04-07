@@ -12,7 +12,7 @@ const coffeeReferenceArray = [
 	{ brand: 'cafe_tres_coracoes_500g_tradicional', reference: 323 },
 	{ brand: 'cafe_melitta_500g_tradicional', reference: 175314 },
 	{ brand: 'cafe_fino_grao_500g_tradicional', reference: 93567 },
-	{ brand: 'cafe_pilao_500g_tradicional/extraforte', reference: 184636 },
+	{ brand: 'cafe_pilao_500g_tradicional/extraforte', reference: 183145 },
 	{ brand: 'cafe_barao_500g_tradicional/extraforte', reference: 105089 },
 	{ brand: 'fake_product_test', reference: 999999999 },
 ];
@@ -30,7 +30,7 @@ const beansReferenceArray = [
 	{ brand: 'feijao_preto_pacha_1kg', reference: 159769 },
 	{ brand: 'feijao_carioca_galante_1kg', reference: 6089 },
 	{ brand: 'feijao_preto_galante_1kg', reference: 151206 },
-	{ brand: 'feijao_carioca_vasconcelos_1kg', reference: 220243 },
+	{ brand: 'feijao_carioca_vasconcelos_1kg', reference: 222841 },
 	{ brand: 'feijao_preto_vasconcelos_1kg', reference: 220335 },
 ];
 
