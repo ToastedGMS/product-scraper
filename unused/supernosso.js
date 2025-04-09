@@ -1,12 +1,9 @@
 import puppeteer from 'puppeteer';
-import { timeout } from 'puppeteer';
 
-/////////////////////////////////////////////////////////////////
-//o mapa vai conter o titulo do produto e seu numero de referencia
-//o valor de referencia é retirado do site do supermercado supernosso
-//the map contains the product title and its reference value
-//the reference value is retrieved from the supernosso supermarket website
-/////////////////////////////////////////////////////////////////
+//this file is unused due to concerns about the long-term reliability of UI-retrieved data
+//kept here for historical reference
+//este arquivo foi inutilizado devido a preocupaçoes com a confiabilidade a longo prazo de dados retirados da UI
+//mantido aqui por referencia historica
 
 const coffeeReferenceArray = [
 	{ brand: 'cafe_tres_coracoes_500g_tradicional', reference: 323 },

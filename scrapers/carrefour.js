@@ -4,13 +4,6 @@ import cafeArray from '../data/Carrefour/cafe.js';
 import arrozArray from '../data/Carrefour/arroz.js';
 import feijaoArray from '../data/Carrefour/feijao.js';
 
-/////////////////////////////////////////////////////////////////
-//o mapa vai conter o titulo do produto e seu numero de SKU
-//o valor de SKU é retirado da API do supermercado carrefour
-//the map contains the product title and its SKU value
-//the SKU value is retrieved from the carrefour supermarket API
-/////////////////////////////////////////////////////////////////
-
 const GRAPHQL_QUERY = `
   query BrowserProductQuery($locator: [LocatorInput!]!) {
     product(locator: $locator) {
