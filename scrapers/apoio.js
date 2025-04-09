@@ -326,49 +326,54 @@ const feijaoSKUArray = [
 	},
 ];
 
-async function getPrice(brand, SKU) {
-	try {
-		const response = await fetch(
-			`https://www.apoioentrega.com/api/catalog_system/pub/products/search?fq=skuId:${SKU}`
-		);
-		const data = await response.json();
-		const product = data[0];
+async function getPrice(productArray) {
+	const results = [];
 
-		const item = product.items[0];
-		const seller = item.sellers[0];
-		const offer = seller.commertialOffer;
+	for (const query of productArray) {
+		const { brand, sku, market } = query;
 
-		const price = {
-			Product: product.productName,
-			Price: offer.Price,
-		};
+		try {
+			const response = await fetch(
+				`https://www.apoioentrega.com/api/catalog_system/pub/products/search?fq=skuId:${sku}`
+			);
+			const data = await response.json();
+			const product = data[0];
 
-		return { brand, ...price };
-	} catch (error) {
-		console.error(`Error fetching ${brand} (SKU: ${SKU}):`, error.message);
-		return { brand, Product: 'Error', Price: 'Error' };
+			if (!product) {
+				console.warn(`Produto não encontrado: ${brand}`);
+				continue;
+			}
+
+			const item = product.items?.[0];
+			const seller = item?.sellers?.[0];
+			const offer = seller?.commertialOffer;
+
+			results.push({
+				Brand: brand,
+				Product: product.productName || 'Desconhecido',
+				Price: offer?.Price ?? 'Indisponível',
+				Market: market,
+			});
+		} catch (error) {
+			console.error(`Erro ao buscar ${brand} (SKU: ${sku}):`, error.message);
+			results.push({
+				Brand: brand,
+				Product: 'Erro',
+				Price: 'Erro',
+				Market: market,
+			});
+		}
 	}
+
+	return results;
 }
 
 export default async function scrapeAll() {
-	const cafeResults = [];
-	for (const item of cafeSKUArray) {
-		const data = await getPrice(item.brand, item.sku);
-		cafeResults.push(data);
-	}
+	const cafeResults = await getPrice(cafeSKUArray);
 
-	const arrozResults = [];
-	for (const item of arrozSKUArray) {
-		const data = await getPrice(item.brand, item.sku);
-		arrozResults.push(data);
-	}
+	const arrozResults = await getPrice(arrozSKUArray);
 
-	const feijaoResults = [];
-	for (const item of feijaoSKUArray) {
-		const data = await getPrice(item.brand, item.sku);
-		feijaoResults.push(data);
-	}
-
+	const feijaoResults = await getPrice(feijaoSKUArray);
 	const allPrices = {
 		cafe: cafeResults,
 		arroz: arrozResults,
@@ -379,3 +384,5 @@ export default async function scrapeAll() {
 	);
 	return allPrices;
 }
+
+console.log(await scrapeAll());

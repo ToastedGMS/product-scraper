@@ -218,6 +218,8 @@ const GRAPHQL_QUERY = `
 `;
 
 async function getPrice(productArray) {
+	const results = [];
+
 	for (const product of productArray) {
 		const variables = {
 			locator: [
@@ -254,9 +256,12 @@ async function getPrice(productArray) {
 			} else {
 				const data = result.data?.product;
 				if (data) {
-					console.log(
-						`${product.brand}: ${data.name} - R$${data.offers.lowPrice}`
-					);
+					results.push({
+						Brand: product.brand,
+						Product: data.name,
+						Price: data.offers.lowPrice,
+						Market: product.market,
+					});
 				} else {
 					console.log(`Produto não encontrado: ${product.brand}`);
 				}
@@ -265,4 +270,24 @@ async function getPrice(productArray) {
 			console.error(`Network/Server error for ${product.brand}:`, err);
 		}
 	}
+	return results;
 }
+
+async function scrapeAll() {
+	const cafeResults = await getPrice(cafeSKUArray);
+
+	const arrozResults = await getPrice(arrozSKUArray);
+
+	const feijaoResults = await getPrice(feijaoSKUArray);
+	const allPrices = {
+		cafe: cafeResults,
+		arroz: arrozResults,
+		feijao: feijaoResults,
+	};
+	console.log(
+		'Obs: Os preços dos cafes do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
+	);
+	return allPrices;
+}
+
+console.log(await scrapeAll());
