@@ -263,14 +263,68 @@ const arrozSKUArray = [
 	},
 ];
 
-// const beansSKUArray = [
-// 	{ brand: 'feijao_carioca_pacha_1kg', SKU: 14495 },
-// 	{ brand: 'feijao_preto_pacha_1kg', SKU: 13081 },
-// 	{ brand: 'feijao_carioca_galante_1kg', SKU: 8159 },
-// 	{ brand: 'feijao_carioca_vasconcelos_1kg', SKU: 125316 },
-// 	{ brand: 'feijao_preto_vasconcelos_1kg', SKU: 123692 },
-// ];
-//commented out for due reformatting
+const feijaoSKUArray = [
+	{
+		id: 'feijao_carioca_vasconcelos_1kg',
+		type: 'feijao',
+		variety: 'carioca',
+		brand: 'Vasconcelos',
+		name: 'Feijão Carioca Vasconcelos 1kg',
+		weight: 1,
+		market: 'Apoio Mineiro',
+		sku: '125316',
+	},
+	{
+		id: 'feijao_carioca_tche_banda_sabor_campo_1kg',
+		type: 'feijao',
+		variety: 'carioca',
+		brand: 'Sabor Campo',
+		name: 'Feijão Carioca Tche Banda Sabor Campo 1kg',
+		weight: 1,
+		market: 'Apoio Mineiro',
+		sku: '22526',
+	},
+	{
+		id: 'feijao_carioca_apreco_1kg',
+		type: 'feijao',
+		variety: 'carioca',
+		brand: 'Apreço',
+		name: 'Feijão Carioca Apreço 1kg',
+		weight: 1,
+		market: 'Apoio Mineiro',
+		sku: '41951',
+	},
+	{
+		id: 'feijao_carioca_cariri_1kg',
+		type: 'feijao',
+		variety: 'carioca',
+		brand: 'Cariri',
+		name: 'Feijão Carioca Cariri 1kg',
+		weight: 1,
+		market: 'Apoio Mineiro',
+		sku: '113883',
+	},
+	{
+		id: 'feijao_carioca_pacha_1kg',
+		type: 'feijao',
+		variety: 'carioca',
+		brand: 'Pachá',
+		name: 'Feijão Carioca Pachá 1kg',
+		weight: 1,
+		market: 'Apoio Mineiro',
+		sku: '14495',
+	},
+	{
+		id: 'feijao_carioca_galante_1kg',
+		type: 'feijao',
+		variety: 'carioca',
+		brand: 'Galante',
+		name: 'Feijão Carioca Galante 1kg',
+		weight: 1,
+		market: 'Apoio Mineiro',
+		sku: '8159',
+	},
+];
 
 async function getPrice(brand, SKU) {
 	try {
@@ -309,16 +363,16 @@ export default async function scrapeAll() {
 		arrozResults.push(data);
 	}
 
-	// const beansResults = [];
-	// for (const item of beansSKUArray) {
-	// 	const data = await getPrice(item.brand, item.SKU);
-	// 	beansResults.push(data);
-	// }
+	const feijaoResults = [];
+	for (const item of feijaoSKUArray) {
+		const data = await getPrice(item.brand, item.sku);
+		feijaoResults.push(data);
+	}
 
 	const allPrices = {
 		cafe: cafeResults,
 		arroz: arrozResults,
-		// beans: beansResults,
+		feijao: feijaoResults,
 	};
 	console.log(
 		'Obs: Os preços dos cafes do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
