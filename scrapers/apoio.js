@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import scrape from '../utils/scrape.js';
 
 /////////////////////////////////////////////////////////////////
 //o mapa vai conter o titulo do produto e seu numero de SKU
@@ -368,21 +369,6 @@ async function getPrice(productArray) {
 	return results;
 }
 
-export default async function scrapeAll() {
-	const cafeResults = await getPrice(cafeSKUArray);
-
-	const arrozResults = await getPrice(arrozSKUArray);
-
-	const feijaoResults = await getPrice(feijaoSKUArray);
-	const allPrices = {
-		cafe: cafeResults,
-		arroz: arrozResults,
-		feijao: feijaoResults,
-	};
-	console.log(
-		'Obs: Os preços dos cafes do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
-	);
-	return allPrices;
-}
-
-console.log(await scrapeAll());
+console.log(
+	await scrape(getPrice, cafeSKUArray, arrozSKUArray, feijaoSKUArray)
+);
