@@ -7,11 +7,12 @@ import fetch from 'node-fetch';
 //the SKU value is retrieved from the apoio supermarket API
 /////////////////////////////////////////////////////////////////
 
-const coffeeSKUArray = [
+const cafeSKUArray = [
 	{
 		id: 'cafe_tres_coracoes_500g_tradicional',
+		type: 'cafe',
 		brand: '3 Corações',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'pacote',
 		market: 'Apoio Mineiro',
@@ -19,8 +20,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_pilao_500g_tradicional',
+		type: 'cafe',
 		brand: 'Pilão',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'pacote',
 		market: 'Apoio Mineiro',
@@ -28,8 +30,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_barao_500g_tradicional',
+		type: 'cafe',
 		brand: 'Barão',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'pacote',
 		market: 'Apoio Mineiro',
@@ -37,8 +40,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_nova_suissa_500g_tradicional',
+		type: 'cafe',
 		brand: 'Nova Suissa',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'pacote',
 		market: 'Apoio Mineiro',
@@ -46,8 +50,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_fino_grao_500g_tradicional',
+		type: 'cafe',
 		brand: 'Fino Grão',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'pacote',
 		market: 'Apoio Mineiro',
@@ -55,8 +60,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_caboclo_tradicional_500g',
+		type: 'cafe',
 		brand: 'Caboclo',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'pacote',
 		market: 'Apoio Mineiro',
@@ -64,8 +70,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_dom_pedro_500g_tradicional',
+		type: 'cafe',
 		brand: 'Dom Pedro',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'pacote',
 		market: 'Apoio Mineiro',
@@ -73,8 +80,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_fort_500g',
+		type: 'cafe',
 		brand: 'Fort',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'pacote',
 		market: 'Apoio Mineiro',
@@ -82,8 +90,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_uniao_500g_tradicional',
+		type: 'cafe',
 		brand: 'União',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'pacote',
 		market: 'Apoio Mineiro',
@@ -91,8 +100,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_pilao_500g_tradicional_vacuo',
+		type: 'cafe',
 		brand: 'Pilão',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'vácuo',
 		market: 'Apoio Mineiro',
@@ -100,8 +110,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_tres_coracoes_500g_tradicional_vacuo',
+		type: 'cafe',
 		brand: '3 Corações',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'vácuo',
 		market: 'Apoio Mineiro',
@@ -109,8 +120,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'cafe_melitta_500g_tradicional',
+		type: 'cafe',
 		brand: 'Melitta',
-		name: 'Café Tradicional',
+		name: 'Cafe Tradicional',
 		weight: 500,
 		packaging: 'unknown',
 		market: 'Apoio Mineiro',
@@ -118,8 +130,9 @@ const coffeeSKUArray = [
 	},
 	{
 		id: 'fake_product_test',
+		type: 'cafe',
 		brand: 'Product',
-		name: 'Café Tradicional',
+		name: 'Product',
 		weight: null,
 		packaging: 'unknown',
 		market: 'Apoio Mineiro',
@@ -127,13 +140,128 @@ const coffeeSKUArray = [
 	},
 ];
 
-// const riceSKUArray = [
-// 	{ brand: 'arroz_tia_ju_tipo1_5kg', SKU: 20960 },
-// 	{ brand: 'arroz_branco_prato_fino_tipo1_5kg', SKU: 10487 },
-// 	{ brand: 'arroz_branco_camil_tipo1_5kg', SKU: 8140 },
-// 	{ brand: 'arroz_polido_pilecco_nobre_tipo1_5kg', SKU: 597 },
-// 	{ brand: 'arroz_tio_joao_tipo1_5kg', SKU: 7931 },
-// ];
+const arrozSKUArray = [
+	{
+		id: 'arroz_branco_fino_camil_tipo1_5kg',
+		type: 'arroz',
+		brand: 'Camil',
+		name: 'Arroz Branco Fino Camil Tipo 1 5kg',
+		weight: 5,
+		parboil: false,
+		market: 'Apoio Mineiro',
+		sku: '8140',
+	},
+	{
+		id: 'arroz_branco_prato_fino_tipo1_5kg',
+		type: 'arroz',
+		brand: 'Prato Fino',
+		name: 'Arroz Branco Prato Fino Tipo 1 5kg',
+		weight: 5,
+		parboil: false,
+		market: 'Apoio Mineiro',
+		sku: '10487',
+	},
+	{
+		id: 'arroz_tio_joao_tipo1_graos_nobres_5kg',
+		type: 'arroz',
+		brand: 'Tio Joao',
+		name: 'Arroz Tio João 100% Grãos Nobres Tipo 1 Classe Longo Fino 5kg',
+		weight: 5,
+		parboil: false,
+		market: 'Apoio Mineiro',
+		sku: '7931',
+	},
+	{
+		id: 'arroz_polido_super_ecco_tipo1_5kg',
+		type: 'arroz',
+		brand: 'Super Ecco',
+		name: 'Arroz Polido Tipo 1 Super Ecco Pacote 5kg',
+		weight: 5,
+		parboil: false,
+		market: 'Apoio Mineiro',
+		sku: '1783',
+	},
+	{
+		id: 'arroz_polido_pilecco_nobre_tipo1_5kg',
+		type: 'arroz',
+		brand: 'Pilecco Nobre',
+		name: 'Arroz Polido Tipo 1 Pilecco Nobre Pacote 5kg',
+		weight: 5,
+		parboil: false,
+		market: 'Apoio Mineiro',
+		sku: '597',
+	},
+	{
+		id: 'arroz_agulhinha_carrijo_tipo1_5kg',
+		type: 'arroz',
+		brand: 'Carrijo',
+		name: 'Arroz Agulhinha Tipo 1 Carrijo Pacote 5kg',
+		weight: 5,
+		parboil: false,
+		market: 'Apoio Mineiro',
+		sku: '12066',
+	},
+	{
+		id: 'arroz_branco_vasconcelos_tipo1_5kg',
+		type: 'arroz',
+		brand: 'Vasconcelos',
+		name: 'Arroz Branco Vasconcelos Tipo 1 Pacote 5Kg',
+		weight: 5,
+		parboil: false,
+		market: 'Apoio Mineiro',
+		sku: '42706',
+	},
+	{
+		id: 'arroz_tia_ju_tipo1_5kg',
+		type: 'arroz',
+		brand: 'Tia Ju',
+		name: 'Arroz Tia Ju Tipo 1 5kg',
+		weight: 5,
+		parboil: false,
+		market: 'Apoio Mineiro',
+		sku: '20960',
+	},
+	{
+		id: 'arroz_prato_rico_5kg',
+		type: 'arroz',
+		brand: 'Prato Rico',
+		name: 'Arroz Prato Rico 5kg',
+		weight: 5,
+		parboil: false,
+		market: 'Apoio Mineiro',
+		sku: '126857',
+	},
+	{
+		id: 'arroz_branco_apreco_tipo1_5kg',
+		type: 'arroz',
+		brand: 'Apreco',
+		name: 'Arroz Branco Tipo 1 Apreço 5kg',
+		weight: 5,
+		parboil: false,
+		market: 'Apoio Mineiro',
+		sku: '42284',
+	},
+	{
+		id: 'arroz_prato_fino_parboilizado_tipo1_5kg',
+		type: 'arroz',
+		brand: 'Prato Fino',
+		name: 'Arroz Prato Fino Parboilizado Tipo 1 Pacote 5kg',
+		weight: 5,
+		parboil: true,
+		market: 'Apoio Mineiro',
+		sku: '291',
+	},
+	{
+		id: 'arroz_tio_joao_parboilizado_tipo1_5kg',
+		type: 'arroz',
+		brand: 'Tio Joao',
+		name: 'Arroz Tio João Parboilizado Tipo 1 Pacote 5 kg',
+		weight: 5,
+		parboil: true,
+		market: 'Apoio Mineiro',
+		sku: '7731',
+	},
+];
 
 // const beansSKUArray = [
 // 	{ brand: 'feijao_carioca_pacha_1kg', SKU: 14495 },
@@ -159,8 +287,6 @@ async function getPrice(brand, SKU) {
 		const price = {
 			Product: product.productName,
 			Price: offer.Price,
-			// availableQuantity: offer.AvailableQuantity,
-			// url: product.link,
 		};
 
 		return { brand, ...price };
@@ -171,17 +297,17 @@ async function getPrice(brand, SKU) {
 }
 
 export default async function scrapeAll() {
-	const coffeeResults = [];
-	for (const item of coffeeSKUArray) {
+	const cafeResults = [];
+	for (const item of cafeSKUArray) {
 		const data = await getPrice(item.brand, item.sku);
-		coffeeResults.push(data);
+		cafeResults.push(data);
 	}
 
-	// const riceResults = [];
-	// for (const item of riceSKUArray) {
-	// 	const data = await getPrice(item.brand, item.SKU);
-	// 	riceResults.push(data);
-	// }
+	const arrozResults = [];
+	for (const item of arrozSKUArray) {
+		const data = await getPrice(item.brand, item.sku);
+		arrozResults.push(data);
+	}
 
 	// const beansResults = [];
 	// for (const item of beansSKUArray) {
@@ -190,12 +316,12 @@ export default async function scrapeAll() {
 	// }
 
 	const allPrices = {
-		coffee: coffeeResults,
-		// rice: riceResults,
+		cafe: cafeResults,
+		arroz: arrozResults,
 		// beans: beansResults,
 	};
 	console.log(
-		'Obs: Os preços dos cafés do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
+		'Obs: Os preços dos cafes do tipo extraforte e tradicional são iguais e por isso seus valores sao requisitados juntos.'
 	);
 	return allPrices;
 }
