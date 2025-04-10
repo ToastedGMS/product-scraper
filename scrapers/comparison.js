@@ -25,9 +25,9 @@ async function compareResults() {
 	);
 
 	const allResults = {
-		cafeResults: [...apoioResults.cafe, ...carrefourResults.cafe],
-		arrozResults: [...apoioResults.arroz, ...carrefourResults.arroz],
-		feijaoResults: [...apoioResults.feijao, ...carrefourResults.feijao],
+		cafe: [...apoioResults.cafe, ...carrefourResults.cafe],
+		arroz: [...apoioResults.arroz, ...carrefourResults.arroz],
+		feijao: [...apoioResults.feijao, ...carrefourResults.feijao],
 	};
 	return allResults;
 }
