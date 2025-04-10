@@ -1,8 +1,4 @@
 import fetch from 'node-fetch';
-import scrape from '../utils/scrape.js';
-import cafeArray from '../data/Apoio/cafe.js';
-import arrozArray from '../data/Apoio/arroz.js';
-import feijaoArray from '../data/Apoio/feijao.js';
 
 async function getPrice(productArray) {
 	const results = [];
@@ -46,4 +42,4 @@ async function getPrice(productArray) {
 	return results;
 }
 
-console.log(await scrape(getPrice, cafeArray, arrozArray, feijaoArray));
+export default getPrice;

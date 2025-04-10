@@ -1,8 +1,4 @@
 import fetch from 'node-fetch';
-import scrape from '../utils/scrape.js';
-import cafeArray from '../data/Carrefour/cafe.js';
-import arrozArray from '../data/Carrefour/arroz.js';
-import feijaoArray from '../data/Carrefour/feijao.js';
 
 const GRAPHQL_QUERY = `
   query BrowserProductQuery($locator: [LocatorInput!]!) {
@@ -71,4 +67,4 @@ async function getPrice(productArray) {
 	return results;
 }
 
-console.log(await scrape(getPrice, cafeArray, arrozArray, feijaoArray));
+export default getPrice;
