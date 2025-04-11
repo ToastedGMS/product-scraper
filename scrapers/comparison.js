@@ -10,6 +10,11 @@ import arrozArrayCarrefour from '../data/Carrefour/arroz.js';
 import feijaoArrayCarrefour from '../data/Carrefour/feijao.js';
 import getPriceCarrefour from './carrefour.js';
 
+import cafeArrayVillefort from '../data/Villefort/cafe.js';
+import arrozArrayVillefort from '../data/Villefort/arroz.js';
+import feijaoArrayVillefort from '../data/Villefort/feijao.js';
+import getPriceVillefort from './villefort.js';
+
 async function compareResults() {
 	const apoioResults = await scrape(
 		getPriceApoio,
@@ -24,12 +29,37 @@ async function compareResults() {
 		feijaoArrayCarrefour
 	);
 
-	const allResults = {
-		cafe: [...apoioResults.cafe, ...carrefourResults.cafe],
-		arroz: [...apoioResults.arroz, ...carrefourResults.arroz],
-		feijao: [...apoioResults.feijao, ...carrefourResults.feijao],
-	};
-	return allResults;
-}
+	const villefortResults = await scrape(
+		getPriceVillefort,
+		cafeArrayVillefort,
+		arrozArrayVillefort,
+		feijaoArrayVillefort
+	);
 
-console.dir(await compareResults(), { depth: null });
+	const allResults = {
+		cafe: [
+			...apoioResults.cafe,
+			...carrefourResults.cafe,
+			...villefortResults.cafe,
+		],
+		arroz: [
+			...apoioResults.arroz,
+			...carrefourResults.arroz,
+			...villefortResults.arroz,
+		],
+		feijao: [
+			...apoioResults.feijao,
+			...carrefourResults.feijao,
+			...villefortResults.feijao,
+		],
+	};
+	console.log('Café:');
+	console.table(allResults.cafe);
+
+	console.log('Arroz:');
+	console.table(allResults.arroz);
+
+	console.log('Feijão:');
+	console.table(allResults.feijao);
+}
+console.log(await compareResults());
