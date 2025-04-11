@@ -1,19 +1,15 @@
 import fetch from 'node-fetch';
 import getVillefortToken from '../utils/getVillefortToken.js';
 
-let cachedToken = null;
-
 async function getProductDetails(productId) {
-	if (!cachedToken) {
-		cachedToken = await getVillefortToken();
-	}
+	let token = await getVillefortToken();
 
 	let response = await fetch(
 		`https://services.vipcommerce.com.br/api-admin/v1/loja/produtos/${productId}/filial/1/centro_distribuicao/1/detalhes`,
 		{
 			method: 'GET',
 			headers: {
-				Authorization: `Bearer ${cachedToken}`,
+				Authorization: `Bearer ${token}`,
 				authority: 'services.vipcommerce.com.br',
 				'Content-Type': 'application/json',
 				Origin: 'https://www.villefortentrega.com.br',
@@ -25,12 +21,15 @@ async function getProductDetails(productId) {
 	);
 
 	if (response.status === 403) {
-		cachedToken = await getVillefortToken();
+		token = await getVillefortToken();
 		return getProductDetails(productId);
 	}
 
 	const res = await response.json();
-	return { Product: res.data.produto.descricao, Price: res.data.produto.preco };
+	return {
+		Product: res.data.produto.descricao,
+		Price: res.data.produto.preco,
+	};
 }
 
 console.log(await getProductDetails(5401));

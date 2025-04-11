@@ -1,4 +1,8 @@
+let cachedToken = null;
+
 async function getVillefortToken() {
+	if (cachedToken) return cachedToken;
+
 	try {
 		const response = await fetch(
 			'https://services.vipcommerce.com.br/api-admin/v1/auth/loja/login',
@@ -24,7 +28,7 @@ async function getVillefortToken() {
 			throw new Error(`Login failed: ${res.message || 'Unknown error'}`);
 		}
 
-		const cachedToken = res.data;
+		cachedToken = res.data;
 		return cachedToken;
 	} catch (err) {
 		console.error('Failed to get Villefort token:', err.message);
