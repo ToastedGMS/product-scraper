@@ -112,7 +112,7 @@ const cafeSKUArray = [
 	{
 		id: 'cafe_extra_forte_pilao_500g_vacuo',
 		type: 'cafe',
-		brand: 'Pilâo',
+		brand: 'Pilão',
 		name: 'Cafe Extra Forte',
 		weight: 500,
 		packaging: 'vacuo',
