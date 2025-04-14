@@ -15,7 +15,7 @@ const feijaoSKUArray = [
 		variety: 'carioca',
 		brand: 'Dona Dê',
 		name: 'Feijão Carioca Dona Dê 1kg',
-		weight: 1,
+		weight: '1kg',
 		market: 'Villefort',
 		sku: '9863', //productId in villefort's system | productId no sistema do villefort
 	},
@@ -25,7 +25,7 @@ const feijaoSKUArray = [
 		variety: 'carioca',
 		brand: 'Camil',
 		name: 'Feijão Carioca Camil 1kg',
-		weight: 1,
+		weight: '1kg',
 		market: 'Villefort',
 		sku: '9080', //productId in villefort's system | productId no sistema do villefort
 	},
@@ -35,7 +35,7 @@ const feijaoSKUArray = [
 		variety: 'carioca',
 		brand: 'Vasconcelos',
 		name: 'Feijão Carioca Vasconcelos 1kg',
-		weight: 1,
+		weight: '1kg',
 		market: 'Villefort',
 		sku: '8614', //productId in villefort's system | productId no sistema do villefort
 	},
@@ -45,7 +45,7 @@ const feijaoSKUArray = [
 		variety: 'carioca',
 		brand: 'Codil',
 		name: 'Feijão Carioca Codil 1kg',
-		weight: 1,
+		weight: '1kg',
 		market: 'Villefort',
 		sku: '1081', //productId in villefort's system | productId no sistema do villefort
 	},
@@ -55,7 +55,7 @@ const feijaoSKUArray = [
 		variety: 'carioca',
 		brand: 'Codil',
 		name: 'Feijão Carioca Codil Premium 1kg',
-		weight: 1,
+		weight: '1kg',
 		market: 'Villefort',
 		sku: '3054', //productId in villefort's system | productId no sistema do villefort
 	},
@@ -65,7 +65,7 @@ const feijaoSKUArray = [
 		variety: 'carioca',
 		brand: 'Pachá',
 		name: 'Feijão Carioca Pachá 1kg',
-		weight: 1,
+		weight: '1kg',
 		market: 'Villefort',
 		sku: '3051', //productId in villefort's system | productId no sistema do villefort
 	},
@@ -75,7 +75,7 @@ const feijaoSKUArray = [
 		variety: 'carioca',
 		brand: 'Galante',
 		name: 'Feijão Carioca Galante 1kg',
-		weight: 1,
+		weight: '1kg',
 		market: 'Villefort',
 		sku: '3046', //productId in villefort's system | productId no sistema do villefort
 	},
