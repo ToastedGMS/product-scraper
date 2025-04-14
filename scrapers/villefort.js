@@ -31,7 +31,7 @@ async function getPrice(productArray) {
 		results.push({
 			Brand: product.brand,
 			Product: res.data.produto.descricao,
-			Price: res.data.produto.preco,
+			Price: Number(res.data.produto.preco),
 			Market: product.market,
 		});
 	}
