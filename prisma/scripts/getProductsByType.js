@@ -1,6 +1,6 @@
 import prisma from '../client.js';
 
-async function getProductByType(type) {
+async function getProductsByType(type) {
 	try {
 		const productList = await prisma.product.findMany({
 			where: {
@@ -18,5 +18,5 @@ async function getProductByType(type) {
 	}
 }
 
-export default getProductByType;
-console.log(await getProductByType('cafe'));
+export default getProductsByType;
+console.log(await getProductsByType('cafe'));
