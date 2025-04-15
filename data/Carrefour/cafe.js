@@ -76,15 +76,5 @@ const cafeSKUArray = [
 		market: 'Carrefour',
 		sku: '14726',
 	},
-	{
-		id: 'fake_product_test',
-		type: 'cafe',
-		brand: 'Product',
-		name: 'Product',
-		weight: null,
-		packaging: 'unknown',
-		market: 'Carrefour',
-		sku: '999999999',
-	},
 ];
 export default cafeSKUArray;

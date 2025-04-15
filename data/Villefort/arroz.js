@@ -99,16 +99,16 @@ const arrozSKUArray = [
 		market: 'Villefort',
 		sku: '1040', //productId in villefort's system | productId no sistema do villefort
 	},
-	{
-		id: 'arroz_agulhinha_prato_fino_longo_tipo1_5kg',
-		type: 'arroz',
-		brand: 'Prato Fino',
-		name: 'Arroz Agulhinha Prato Fino Longo Tipo 1 5kg',
-		weight: '5kg',
-		parboil: false,
-		market: 'Villefort',
-		sku: '1027', //productId in villefort's system | productId no sistema do villefort
-	},
+	// {
+	// 	id: 'arroz_agulhinha_prato_fino_longo_tipo1_5kg',
+	// 	type: 'arroz',
+	// 	brand: 'Prato Fino',
+	// 	name: 'Arroz Agulhinha Prato Fino Longo Tipo 1 5kg',
+	// 	weight: '5kg',
+	// 	parboil: false,
+	// 	market: 'Villefort',
+	// 	sku: '1027', //productId in villefort's system | productId no sistema do villefort
+	// },
 	{
 		id: 'arroz_agulhinha_reserva_codil_plus_5kg',
 		type: 'arroz',

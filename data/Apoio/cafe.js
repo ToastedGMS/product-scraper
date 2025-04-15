@@ -126,16 +126,6 @@ const cafeSKUArray = [
 		market: 'Apoio Mineiro',
 		sku: '5583',
 	},
-	{
-		id: 'fake_product_test',
-		type: 'cafe',
-		brand: 'Product',
-		name: 'Product',
-		weight: null,
-		packaging: 'unknown',
-		market: 'Apoio Mineiro',
-		sku: '999999999',
-	},
 ];
 
 export default cafeSKUArray;

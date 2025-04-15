@@ -39,16 +39,16 @@ const cafeSKUArray = [
 		market: 'Villefort',
 		sku: '10072', //productId in villefort's system | productId no sistema do villefort
 	},
-	{
-		id: 'cafe_tradicional_pilao_500g',
-		type: 'cafe',
-		brand: 'Pilão',
-		name: 'Café Tradicional',
-		weight: '500g',
-		packaging: 'pacote',
-		market: 'Villefort',
-		sku: '13649', //productId in villefort's system | productId no sistema do villefort
-	},
+	// {
+	// 	id: 'cafe_tradicional_pilao_500g',
+	// 	type: 'cafe',
+	// 	brand: 'Pilão',
+	// 	name: 'Café Tradicional',
+	// 	weight: '500g',
+	// 	packaging: 'pacote',
+	// 	market: 'Villefort',
+	// 	sku: '13649', //productId in villefort's system | productId no sistema do villefort
+	// },
 	{
 		id: 'cafe_tradicional_caboclo_500g',
 		type: 'cafe',

@@ -9,16 +9,16 @@
 //villefort uses productId and not SKUs, but I opted on keeping the same data structure to keep the code uniform
 
 const feijaoSKUArray = [
-	{
-		id: 'feijao_carioca_dona_de_1kg',
-		type: 'feijao',
-		variety: 'carioca',
-		brand: 'Dona Dê',
-		name: 'Feijão Carioca Dona Dê 1kg',
-		weight: '1kg',
-		market: 'Villefort',
-		sku: '9863', //productId in villefort's system | productId no sistema do villefort
-	},
+	// {
+	// 	id: 'feijao_carioca_dona_de_1kg',
+	// 	type: 'feijao',
+	// 	variety: 'carioca',
+	// 	brand: 'Dona Dê',
+	// 	name: 'Feijão Carioca Dona Dê 1kg',
+	// 	weight: '1kg',
+	// 	market: 'Villefort',
+	// 	sku: '9863', //productId in villefort's system | productId no sistema do villefort
+	// },
 	{
 		id: 'feijao_carioca_camil_1kg',
 		type: 'feijao',
