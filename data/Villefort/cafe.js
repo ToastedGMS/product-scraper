@@ -10,7 +10,7 @@
 
 const cafeSKUArray = [
 	{
-		id: 'cafe_tradicional_vasconcelos_500g',
+		id: 'villefort_cafe_tradicional_vasconcelos_500g',
 		type: 'cafe',
 		brand: 'Vasconcelos',
 		name: 'Café Tradicional',
@@ -20,7 +20,7 @@ const cafeSKUArray = [
 		sku: '10177', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'cafe_tradicional_barao_500g',
+		id: 'villefort_cafe_tradicional_barao_500g',
 		type: 'cafe',
 		brand: 'Barão',
 		name: 'Café Tradicional',
@@ -30,7 +30,7 @@ const cafeSKUArray = [
 		sku: '4196', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'cafe_tradicional_uniao_500g',
+		id: 'villefort_cafe_tradicional_uniao_500g',
 		type: 'cafe',
 		brand: 'União',
 		name: 'Café Tradicional',
@@ -40,17 +40,17 @@ const cafeSKUArray = [
 		sku: '10072', //productId in villefort's system | productId no sistema do villefort
 	},
 	// {
-	// 	id: 'cafe_tradicional_pilao_500g',
+	// 	id: 'villefort_cafe_tradicional_pilao_500g',
 	// 	type: 'cafe',
 	// 	brand: 'Pilão',
 	// 	name: 'Café Tradicional',
 	// 	weight: '500g',
 	// 	packaging: 'pacote',
 	// 	market: 'Villefort',
-	// 	sku: '13649', //productId in villefort's system | productId no sistema do villefort
+	// 	sku: '13649',//productId in villefort's system | productId no sistema do villefort
 	// },
 	{
-		id: 'cafe_tradicional_caboclo_500g',
+		id: 'villefort_cafe_tradicional_caboclo_500g',
 		type: 'cafe',
 		brand: 'Caboclo',
 		name: 'Café Tradicional',
@@ -60,7 +60,7 @@ const cafeSKUArray = [
 		sku: '13650', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'cafe_tradicional_melitta_500g',
+		id: 'villefort_cafe_tradicional_melitta_500g',
 		type: 'cafe',
 		brand: 'Melitta',
 		name: 'Café Tradicional',
@@ -70,7 +70,7 @@ const cafeSKUArray = [
 		sku: '4179', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'cafe_tradicional_fino_grao_500g',
+		id: 'villefort_cafe_tradicional_fino_grao_500g',
 		type: 'cafe',
 		brand: 'Fino Grão',
 		name: 'Café Tradicional',
@@ -80,7 +80,7 @@ const cafeSKUArray = [
 		sku: '4109', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'cafe_fort_500g',
+		id: 'villefort_cafe_fort_500g',
 		type: 'cafe',
 		brand: 'Fort',
 		name: 'Café Tradicional',
@@ -90,7 +90,7 @@ const cafeSKUArray = [
 		sku: '4099', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'cafe_villefort_tradicional_500g',
+		id: 'villefort_cafe_villefort_tradicional_500g',
 		type: 'cafe',
 		brand: 'Villefort',
 		name: 'Café Tradicional',
@@ -100,7 +100,7 @@ const cafeSKUArray = [
 		sku: '14944', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'cafe_tres_coracoes_tradicional_500g',
+		id: 'villefort_cafe_tres_coracoes_tradicional_500g',
 		type: 'cafe',
 		brand: '3 Corações',
 		name: 'Café Tradicional',
@@ -110,7 +110,7 @@ const cafeSKUArray = [
 		sku: '4237', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'cafe_extra_forte_pilao_500g_vacuo',
+		id: 'villefort_cafe_extra_forte_pilao_500g_vacuo',
 		type: 'cafe',
 		brand: 'Pilão',
 		name: 'Café Extra Forte',

@@ -7,7 +7,7 @@
 
 const arrozSKUArray = [
 	{
-		id: 'arroz_branco_fino_camil_tipo1_5kg',
+		id: 'apoio_arroz_branco_fino_camil_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Camil',
 		name: 'Arroz Branco Fino Camil Tipo 1 5kg',
@@ -17,7 +17,7 @@ const arrozSKUArray = [
 		sku: '8140',
 	},
 	{
-		id: 'arroz_branco_prato_fino_tipo1_5kg',
+		id: 'apoio_arroz_branco_prato_fino_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Prato Fino',
 		name: 'Arroz Branco Prato Fino Tipo 1 5kg',
@@ -27,7 +27,7 @@ const arrozSKUArray = [
 		sku: '10487',
 	},
 	{
-		id: 'arroz_tio_joao_tipo1_graos_nobres_5kg',
+		id: 'apoio_arroz_tio_joao_tipo1_graos_nobres_5kg',
 		type: 'arroz',
 		brand: 'Tio João',
 		name: 'Arroz Tio João 100% Grãos Nobres Tipo 1 Classe Longo Fino 5kg',
@@ -37,7 +37,7 @@ const arrozSKUArray = [
 		sku: '7931',
 	},
 	{
-		id: 'arroz_polido_super_ecco_tipo1_5kg',
+		id: 'apoio_arroz_polido_super_ecco_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Super Ecco',
 		name: 'Arroz Polido Tipo 1 Super Ecco Pacote 5kg',
@@ -47,7 +47,7 @@ const arrozSKUArray = [
 		sku: '1783',
 	},
 	{
-		id: 'arroz_polido_pilecco_nobre_tipo1_5kg',
+		id: 'apoio_arroz_polido_pilecco_nobre_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Pilecco Nobre',
 		name: 'Arroz Polido Tipo 1 Pilecco Nobre Pacote 5kg',
@@ -57,7 +57,7 @@ const arrozSKUArray = [
 		sku: '597',
 	},
 	{
-		id: 'arroz_agulhinha_carrijo_tipo1_5kg',
+		id: 'apoio_arroz_agulhinha_carrijo_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Carrijo',
 		name: 'Arroz Agulhinha Tipo 1 Carrijo Pacote 5kg',
@@ -67,7 +67,7 @@ const arrozSKUArray = [
 		sku: '12066',
 	},
 	{
-		id: 'arroz_branco_vasconcelos_tipo1_5kg',
+		id: 'apoio_arroz_branco_vasconcelos_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Vasconcelos',
 		name: 'Arroz Branco Vasconcelos Tipo 1 Pacote 5kg',
@@ -77,7 +77,7 @@ const arrozSKUArray = [
 		sku: '42706',
 	},
 	{
-		id: 'arroz_tia_ju_tipo1_5kg',
+		id: 'apoio_arroz_tia_ju_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Tia Ju',
 		name: 'Arroz Tia Ju Tipo 1 5kg',
@@ -87,7 +87,7 @@ const arrozSKUArray = [
 		sku: '20960',
 	},
 	{
-		id: 'arroz_prato_rico_5kg',
+		id: 'apoio_arroz_prato_rico_5kg',
 		type: 'arroz',
 		brand: 'Prato Rico',
 		name: 'Arroz Prato Rico 5kg',
@@ -97,7 +97,7 @@ const arrozSKUArray = [
 		sku: '126857',
 	},
 	{
-		id: 'arroz_branco_apreco_tipo1_5kg',
+		id: 'apoio_arroz_branco_apreco_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Apreço',
 		name: 'Arroz Branco Tipo 1 Apreço 5kg',
@@ -107,7 +107,7 @@ const arrozSKUArray = [
 		sku: '42284',
 	},
 	{
-		id: 'arroz_prato_fino_parboilizado_tipo1_5kg',
+		id: 'apoio_arroz_prato_fino_parboilizado_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Prato Fino',
 		name: 'Arroz Prato Fino Parboilizado Tipo 1 Pacote 5kg',
@@ -117,7 +117,7 @@ const arrozSKUArray = [
 		sku: '291',
 	},
 	{
-		id: 'arroz_tio_joao_parboilizado_tipo1_5kg',
+		id: 'apoio_arroz_tio_joao_parboilizado_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Tio João',
 		name: 'Arroz Tio João Parboilizado Tipo 1 Pacote 5kg',

@@ -10,7 +10,7 @@
 
 const feijaoSKUArray = [
 	// {
-	// 	id: 'feijao_carioca_dona_de_1kg',
+	// 	id: 'villefort_feijao_carioca_dona_de_1kg',
 	// 	type: 'feijao',
 	// 	variety: 'carioca',
 	// 	brand: 'Dona Dê',
@@ -20,7 +20,7 @@ const feijaoSKUArray = [
 	// 	sku: '9863', //productId in villefort's system | productId no sistema do villefort
 	// },
 	{
-		id: 'feijao_carioca_camil_1kg',
+		id: 'villefort_feijao_carioca_camil_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Camil',
@@ -30,7 +30,7 @@ const feijaoSKUArray = [
 		sku: '9080', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'feijao_carioca_vasconcelos_1kg',
+		id: 'villefort_feijao_carioca_vasconcelos_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Vasconcelos',
@@ -40,7 +40,7 @@ const feijaoSKUArray = [
 		sku: '8614', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'feijao_carioca_codil_1kg',
+		id: 'villefort_feijao_carioca_codil_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Codil',
@@ -50,7 +50,7 @@ const feijaoSKUArray = [
 		sku: '1081', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'feijao_carioca_codil_premium_1kg',
+		id: 'villefort_feijao_carioca_codil_premium_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Codil',
@@ -60,7 +60,7 @@ const feijaoSKUArray = [
 		sku: '3054', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'feijao_carioca_pacha_1kg',
+		id: 'villefort_feijao_carioca_pacha_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Pachá',
@@ -70,7 +70,7 @@ const feijaoSKUArray = [
 		sku: '3051', //productId in villefort's system | productId no sistema do villefort
 	},
 	{
-		id: 'feijao_carioca_galante_1kg',
+		id: 'villefort_feijao_carioca_galante_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Galante',

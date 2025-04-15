@@ -7,7 +7,7 @@
 
 const arrozSKUArray = [
 	{
-		id: 'arroz_branco_fino_namorado_tipo1_5kg',
+		id: 'carrefour_arroz_branco_fino_namorado_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Namorado',
 		name: 'Arroz Branco Fino Namorado Tipo 1 5kg',
@@ -17,7 +17,7 @@ const arrozSKUArray = [
 		sku: '5854',
 	},
 	{
-		id: 'arroz_branco_fino_broto_legal_tipo1_5kg',
+		id: 'carrefour_arroz_branco_fino_broto_legal_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Broto Legal',
 		name: 'Arroz Branco Fino Broto Legal Tipo 1 5kg',
@@ -27,7 +27,7 @@ const arrozSKUArray = [
 		sku: '4774',
 	},
 	// {
-	// 	id: 'arroz_branco_longo_albaruska_tipo1_5kg',
+	// 	id: 'carrefour_arroz_branco_longo_albaruska_tipo1_5kg',
 	// 	type: 'arroz',
 	// 	brand: 'Albaruska',
 	// 	name: 'Arroz Branco Longo Albaruska Tipo 1 5kg',
@@ -37,7 +37,7 @@ const arrozSKUArray = [
 	// 	sku: '2377',
 	// },
 	{
-		id: 'arroz_branco_longo_fino_tipo1_emporio_sao_joao_5kg',
+		id: 'carrefour_arroz_branco_longo_fino_tipo1_emporio_sao_joao_5kg',
 		type: 'arroz',
 		brand: 'Empório São João',
 		name: 'Arroz Branco Longo Fino Emporio Sao Joao Tipo 1 5kg',
@@ -47,7 +47,7 @@ const arrozSKUArray = [
 		sku: '13402',
 	},
 	{
-		id: 'arroz_longo_fino_tipo1_pateko_5kg',
+		id: 'carrefour_arroz_longo_fino_tipo1_pateko_5kg',
 		type: 'arroz',
 		brand: 'Patéko',
 		name: 'Arroz Tipo 1 Longo Fino Patéko 5kg',
@@ -57,7 +57,7 @@ const arrozSKUArray = [
 		sku: '18078',
 	},
 	{
-		id: 'arroz_longo_fino_alegrete_tipo1_5kg',
+		id: 'carrefour_arroz_longo_fino_alegrete_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Alegrete',
 		name: 'Arroz Longo Fino Tipo 1 Polido Alegrete 5kg',
@@ -67,7 +67,7 @@ const arrozSKUArray = [
 		sku: '9412',
 	},
 	{
-		id: 'arroz_branco_pilecco_nobre_tipo1_5kg',
+		id: 'carrefour_arroz_branco_pilecco_nobre_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Pilecco Nobre',
 		name: 'Arroz Branco Tipo 1 Pilecco Nobre 5kg',
@@ -77,7 +77,7 @@ const arrozSKUArray = [
 		sku: '11337',
 	},
 	{
-		id: 'arroz_parboilizado_longo_fino_carrefour_tipo1_5kg',
+		id: 'carrefour_arroz_parboilizado_longo_fino_carrefour_tipo1_5kg',
 		type: 'arroz',
 		brand: 'Carrefour',
 		name: 'Arroz Parboilizado Longo Fino Carrefour Tipo 1 5kg',

@@ -7,7 +7,7 @@
 
 const cafeSKUArray = [
 	{
-		id: 'cafe_tres_coracoes_500g_tradicional',
+		id: 'apoio_cafe_tres_coracoes_500g_tradicional',
 		type: 'cafe',
 		brand: '3 Corações',
 		name: 'Café Tradicional',
@@ -17,7 +17,7 @@ const cafeSKUArray = [
 		sku: '7645',
 	},
 	{
-		id: 'cafe_pilao_500g_tradicional',
+		id: 'apoio_cafe_pilao_500g_tradicional',
 		type: 'cafe',
 		brand: 'Pilão',
 		name: 'Café Tradicional',
@@ -27,7 +27,7 @@ const cafeSKUArray = [
 		sku: '6791',
 	},
 	{
-		id: 'cafe_barao_500g_tradicional',
+		id: 'apoio_cafe_barao_500g_tradicional',
 		type: 'cafe',
 		brand: 'Barão',
 		name: 'Café Tradicional',
@@ -37,7 +37,7 @@ const cafeSKUArray = [
 		sku: '10420',
 	},
 	{
-		id: 'cafe_nova_suissa_500g_tradicional',
+		id: 'apoio_cafe_nova_suissa_500g_tradicional',
 		type: 'cafe',
 		brand: 'Nova Suissa',
 		name: 'Café Tradicional',
@@ -47,7 +47,7 @@ const cafeSKUArray = [
 		sku: '18386',
 	},
 	{
-		id: 'cafe_fino_grao_500g_tradicional',
+		id: 'apoio_cafe_fino_grao_500g_tradicional',
 		type: 'cafe',
 		brand: 'Fino Grão',
 		name: 'Café Tradicional',
@@ -57,7 +57,7 @@ const cafeSKUArray = [
 		sku: '7618',
 	},
 	{
-		id: 'cafe_caboclo_tradicional_500g',
+		id: 'apoio_cafe_caboclo_tradicional_500g',
 		type: 'cafe',
 		brand: 'Caboclo',
 		name: 'Café Tradicional',
@@ -67,7 +67,7 @@ const cafeSKUArray = [
 		sku: '20147',
 	},
 	{
-		id: 'cafe_dom_pedro_500g_tradicional',
+		id: 'apoio_cafe_dom_pedro_500g_tradicional',
 		type: 'cafe',
 		brand: 'Dom Pedro',
 		name: 'Café Tradicional',
@@ -77,7 +77,7 @@ const cafeSKUArray = [
 		sku: '128881',
 	},
 	{
-		id: 'cafe_fort_500g',
+		id: 'apoio_cafe_fort_500g',
 		type: 'cafe',
 		brand: 'Fort',
 		name: 'Café Tradicional',
@@ -87,7 +87,7 @@ const cafeSKUArray = [
 		sku: '75',
 	},
 	{
-		id: 'cafe_uniao_500g_tradicional',
+		id: 'apoio_cafe_uniao_500g_tradicional',
 		type: 'cafe',
 		brand: 'União',
 		name: 'Café Tradicional',
@@ -97,7 +97,7 @@ const cafeSKUArray = [
 		sku: '123323',
 	},
 	{
-		id: 'cafe_pilao_500g_tradicional_vacuo',
+		id: 'apoio_cafe_pilao_500g_tradicional_vacuo',
 		type: 'cafe',
 		brand: 'Pilão',
 		name: 'Café Tradicional',
@@ -107,7 +107,7 @@ const cafeSKUArray = [
 		sku: '10534',
 	},
 	{
-		id: 'cafe_tres_coracoes_500g_tradicional_vacuo',
+		id: 'apoio_cafe_tres_coracoes_500g_tradicional_vacuo',
 		type: 'cafe',
 		brand: '3 Corações',
 		name: 'Café Tradicional',
@@ -117,7 +117,7 @@ const cafeSKUArray = [
 		sku: '7646',
 	},
 	{
-		id: 'cafe_melitta_500g_tradicional',
+		id: 'apoio_cafe_melitta_500g_tradicional',
 		type: 'cafe',
 		brand: 'Melitta',
 		name: 'Café Tradicional',

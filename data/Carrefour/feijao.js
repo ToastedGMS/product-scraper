@@ -7,7 +7,7 @@
 
 const feijaoSKUArray = [
 	{
-		id: 'feijao_carioca_tryumpho_1kg',
+		id: 'carrefour_feijao_carioca_tryumpho_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Tryumpho',
@@ -17,7 +17,7 @@ const feijaoSKUArray = [
 		sku: '4735174',
 	},
 	{
-		id: 'feijao_carioca_nobre_vasconcelos_1kg',
+		id: 'carrefour_feijao_carioca_nobre_vasconcelos_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Vasconcelos',
@@ -27,7 +27,7 @@ const feijaoSKUArray = [
 		sku: '7034834',
 	},
 	{
-		id: 'feijao_carioca_galante_1kg',
+		id: 'carrefour_feijao_carioca_galante_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Galante',

@@ -7,7 +7,7 @@
 
 const cafeSKUArray = [
 	{
-		id: 'cafe_fort_500g',
+		id: 'carrefour_cafe_fort_500g',
 		type: 'cafe',
 		brand: 'Fort',
 		name: 'Café Fort',
@@ -17,7 +17,7 @@ const cafeSKUArray = [
 		sku: '4578',
 	},
 	{
-		id: 'cafe_fino_grao_500g_tradicional',
+		id: 'carrefour_cafe_fino_grao_500g_tradicional',
 		type: 'cafe',
 		brand: 'Fino Grão',
 		name: 'Café Tradicional',
@@ -27,7 +27,7 @@ const cafeSKUArray = [
 		sku: '13290',
 	},
 	{
-		id: 'cafe_pilao_500g_extraforte',
+		id: 'carrefour_cafe_pilao_500g_extraforte',
 		type: 'cafe',
 		brand: 'Pilão',
 		name: 'Café Extraforte',
@@ -37,7 +37,7 @@ const cafeSKUArray = [
 		sku: '8973',
 	},
 	{
-		id: 'cafe_pilao_500g_tradicional_vacuo',
+		id: 'carrefour_cafe_pilao_500g_tradicional_vacuo',
 		type: 'cafe',
 		brand: 'Pilão',
 		name: 'Café Tradicional',
@@ -47,7 +47,7 @@ const cafeSKUArray = [
 		sku: '4536',
 	},
 	{
-		id: 'cafe_tres_coracoes_500g_tradicional_vacuo',
+		id: 'carrefour_cafe_tres_coracoes_500g_tradicional_vacuo',
 		type: 'cafe',
 		brand: '3 Corações',
 		name: 'Café Tradicional',
@@ -57,7 +57,7 @@ const cafeSKUArray = [
 		sku: '7488090',
 	},
 	{
-		id: 'cafe_caboclo_500g_tradicional_vacuo',
+		id: 'carrefour_cafe_caboclo_500g_tradicional_vacuo',
 		type: 'cafe',
 		brand: 'Caboclo',
 		name: 'Café Tradicional',
@@ -67,7 +67,7 @@ const cafeSKUArray = [
 		sku: '2653',
 	},
 	{
-		id: 'cafe_melitta_500g_tradicional',
+		id: 'carrefour_cafe_melitta_500g_tradicional',
 		type: 'cafe',
 		brand: 'Melitta',
 		name: 'Café Tradicional',

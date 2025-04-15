@@ -7,7 +7,7 @@
 
 const feijaoSKUArray = [
 	{
-		id: 'feijao_carioca_vasconcelos_1kg',
+		id: 'apoio_feijao_carioca_vasconcelos_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Vasconcelos',
@@ -17,7 +17,7 @@ const feijaoSKUArray = [
 		sku: '125316',
 	},
 	{
-		id: 'feijao_carioca_tche_banda_sabor_campo_1kg',
+		id: 'apoio_feijao_carioca_tche_banda_sabor_campo_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Sabor Campo',
@@ -27,7 +27,7 @@ const feijaoSKUArray = [
 		sku: '22526',
 	},
 	{
-		id: 'feijao_carioca_apreco_1kg',
+		id: 'apoio_feijao_carioca_apreco_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Apreço',
@@ -37,7 +37,7 @@ const feijaoSKUArray = [
 		sku: '41951',
 	},
 	{
-		id: 'feijao_carioca_cariri_1kg',
+		id: 'apoio_feijao_carioca_cariri_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Cariri',
@@ -47,7 +47,7 @@ const feijaoSKUArray = [
 		sku: '113883',
 	},
 	{
-		id: 'feijao_carioca_pacha_1kg',
+		id: 'apoio_feijao_carioca_pacha_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Pachá',
@@ -57,7 +57,7 @@ const feijaoSKUArray = [
 		sku: '14495',
 	},
 	{
-		id: 'feijao_carioca_galante_1kg',
+		id: 'apoio_feijao_carioca_galante_1kg',
 		type: 'feijao',
 		variety: 'carioca',
 		brand: 'Galante',
