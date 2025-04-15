@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id          String      @id                    
+  name        String
+  type        String                             // "feijao", "cafe", "arroz", etc.
+  brand       String
+  weight      String                             
+  variety     String?                            // optional, like "carioca"
+  packaging   String?                            // e.g., "pacote", "lata"
+  parboil     Boolean?                           
+  status      String       @default("active")    // could be "active", "unavailable", "discontinued"
+  sku         String                             // product ID in villefort's system
+  market      String                             // e.g., "Villefort"
+  prices      Price[]
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@unique([market, sku]) // a given SKU is unique per supermarket
+}
+
+model Price {
+  id          String      @id @default(cuid())
+  product     Product     @relation(fields: [productId], references: [id])
+  productId   String
+  price       Float
+  date        DateTime    @default(now())
+  available   Boolean     @default(true)     // product might be out of stock
+  createdAt   DateTime    @default(now())
+
+  @@unique([productId, date]) // one price per product per day
+}

@@ -10,6 +10,7 @@
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
+		"@prisma/client": "^6.6.0",
 		"node-fetch": "^3.3.2",
 		"prisma": "^6.6.0",
 		"puppeteer": "^24.5.0"
