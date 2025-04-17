@@ -1,21 +1,21 @@
 import scrape from '../utils/scrape.js';
+import getProducts from '../prisma/scripts/getProducts.js';
 
-import cafeArrayApoio from '../data/Apoio/cafe.js';
-import arrozArrayApoio from '../data/Apoio/arroz.js';
-import feijaoArrayApoio from '../data/Apoio/feijao.js';
 import getPriceApoio from './apoio.js';
-
-import cafeArrayCarrefour from '../data/Carrefour/cafe.js';
-import arrozArrayCarrefour from '../data/Carrefour/arroz.js';
-import feijaoArrayCarrefour from '../data/Carrefour/feijao.js';
 import getPriceCarrefour from './carrefour.js';
-
-import cafeArrayVillefort from '../data/Villefort/cafe.js';
-import arrozArrayVillefort from '../data/Villefort/arroz.js';
-import feijaoArrayVillefort from '../data/Villefort/feijao.js';
 import getPriceVillefort from './villefort.js';
 
 async function compareResults() {
+	const cafeArrayApoio = await getProducts('cafe', 'Apoio Mineiro');
+	const arrozArrayApoio = await getProducts('arroz', 'Apoio Mineiro');
+	const feijaoArrayApoio = await getProducts('feijao', 'Apoio Mineiro');
+	const cafeArrayCarrefour = await getProducts('cafe', 'Carrefour');
+	const arrozArrayCarrefour = await getProducts('arroz', 'Carrefour');
+	const feijaoArrayCarrefour = await getProducts('feijao', 'Carrefour');
+	const cafeArrayVillefort = await getProducts('cafe', 'Villefort');
+	const arrozArrayVillefort = await getProducts('arroz', 'Villefort');
+	const feijaoArrayVillefort = await getProducts('feijao', 'Villefort');
+
 	const apoioResults = await scrape(
 		getPriceApoio,
 		cafeArrayApoio,
@@ -35,7 +35,6 @@ async function compareResults() {
 		arrozArrayVillefort,
 		feijaoArrayVillefort
 	);
-
 	const allResults = {
 		cafe: [
 			...apoioResults.cafe,
