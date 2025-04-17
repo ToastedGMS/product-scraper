@@ -6,59 +6,47 @@ import getPriceCarrefour from './carrefour.js';
 import getPriceVillefort from './villefort.js';
 
 async function compareResults() {
-	const cafeArrayApoio = await getProducts('cafe', 'Apoio Mineiro');
-	const arrozArrayApoio = await getProducts('arroz', 'Apoio Mineiro');
-	const feijaoArrayApoio = await getProducts('feijao', 'Apoio Mineiro');
-	const cafeArrayCarrefour = await getProducts('cafe', 'Carrefour');
-	const arrozArrayCarrefour = await getProducts('arroz', 'Carrefour');
-	const feijaoArrayCarrefour = await getProducts('feijao', 'Carrefour');
-	const cafeArrayVillefort = await getProducts('cafe', 'Villefort');
-	const arrozArrayVillefort = await getProducts('arroz', 'Villefort');
-	const feijaoArrayVillefort = await getProducts('feijao', 'Villefort');
+	try {
+		const markets = ['Apoio Mineiro', 'Carrefour', 'Villefort'];
+		const types = ['cafe', 'arroz', 'feijao'];
+		const scrapers = {
+			'Apoio Mineiro': getPriceApoio,
+			Carrefour: getPriceCarrefour,
+			Villefort: getPriceVillefort,
+		};
 
-	const apoioResults = await scrape(
-		getPriceApoio,
-		cafeArrayApoio,
-		arrozArrayApoio,
-		feijaoArrayApoio
-	);
-	const carrefourResults = await scrape(
-		getPriceCarrefour,
-		cafeArrayCarrefour,
-		arrozArrayCarrefour,
-		feijaoArrayCarrefour
-	);
+		const productMetadata = {};
+		for (const market of markets) {
+			for (const type of types) {
+				const query = `${type}_${market}`;
+				productMetadata[query] = await getProducts(type, market);
+			}
+		}
 
-	const villefortResults = await scrape(
-		getPriceVillefort,
-		cafeArrayVillefort,
-		arrozArrayVillefort,
-		feijaoArrayVillefort
-	);
-	const allResults = {
-		cafe: [
-			...apoioResults.cafe,
-			...carrefourResults.cafe,
-			...villefortResults.cafe,
-		],
-		arroz: [
-			...apoioResults.arroz,
-			...carrefourResults.arroz,
-			...villefortResults.arroz,
-		],
-		feijao: [
-			...apoioResults.feijao,
-			...carrefourResults.feijao,
-			...villefortResults.feijao,
-		],
-	};
-	console.log('Café:');
-	console.table(allResults.cafe);
+		const results = {};
+		for (const market of markets) {
+			const marketResults = await scrape(
+				scrapers[market],
+				productMetadata[`cafe_${market}`],
+				productMetadata[`arroz_${market}`],
+				productMetadata[`feijao_${market}`]
+			);
+			for (const type of types) {
+				if (!results[type]) results[type] = [];
+				results[type].push(...marketResults[type]);
+			}
+		}
 
-	console.log('Arroz:');
-	console.table(allResults.arroz);
+		console.log('Café:');
+		console.table(results.cafe);
 
-	console.log('Feijão:');
-	console.table(allResults.feijao);
+		console.log('Arroz:');
+		console.table(results.arroz);
+
+		console.log('Feijão:');
+		console.table(results.feijao);
+	} catch (error) {
+		console.error(error);
+	}
 }
 console.log(await compareResults());
