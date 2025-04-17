@@ -4,7 +4,7 @@ async function getPrice(productArray) {
 	const results = [];
 
 	for (const query of productArray) {
-		const { brand, sku, market } = query;
+		const { brand, sku, market, id } = query;
 
 		try {
 			const response = await fetch(
@@ -23,6 +23,7 @@ async function getPrice(productArray) {
 			const offer = seller?.commertialOffer;
 
 			results.push({
+				id: id,
 				Brand: brand,
 				Product: product.productName || 'Desconhecido',
 				Price: offer?.Price ?? 'Indisponível',

@@ -51,6 +51,7 @@ async function getPrice(productArray) {
 				const data = result.data?.product;
 				if (data) {
 					results.push({
+						id: product.id,
 						Brand: product.brand,
 						Product: data.name,
 						Price: data.offers.lowPrice,
