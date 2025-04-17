@@ -1,5 +1,6 @@
 import scrape from '../utils/scrape.js';
 import getProducts from '../prisma/scripts/getProducts.js';
+import storePrice from '../prisma/scripts/storePrice.js';
 
 import getPriceApoio from './apoio.js';
 import getPriceCarrefour from './carrefour.js';
@@ -37,14 +38,14 @@ async function compareResults() {
 			}
 		}
 
-		console.log('Café:');
-		console.table(results.cafe);
+		console.log('Salvando preços de Café:');
+		storePrice(results.cafe);
 
-		console.log('Arroz:');
-		console.table(results.arroz);
+		console.log('Salvando preços de Arroz:');
+		storePrice(results.arroz);
 
-		console.log('Feijão:');
-		console.table(results.feijao);
+		console.log('Salvando preços de Feijão:');
+		storePrice(results.feijao);
 	} catch (error) {
 		console.error(error);
 	}
