@@ -5,18 +5,13 @@ async function getProducts(type, market) {
 		console.log(
 			`Getting product metadata for products of type ${type} and market ${market} from database.`
 		);
-		const productList = await prisma.product.findMany({
-			where: {
-				type: type != null ? type : null,
-				market: market != null ? market : null,
-			},
-		});
+		const filters = {};
+		if (type) filters.type = type;
+		if (market) filters.market = market;
 
-		if (productList.length === 0) {
-			throw new Error(
-				`No products found for provided parameters \'${type}\' and \'${market}\'`
-			);
-		}
+		const productList = await prisma.product.findMany({
+			where: filters,
+		});
 
 		return productList;
 	} catch (error) {
