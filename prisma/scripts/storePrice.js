@@ -1,5 +1,5 @@
 import prisma from '../client.js';
-import retrievePriceHistory from './retrievePriceHistory.js';
+import retrievePriceHistory from './priceHistory.js';
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 
