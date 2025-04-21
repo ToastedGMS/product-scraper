@@ -9,10 +9,12 @@ async function priceHistory(...args) {
 
 	for (const item of history) {
 		console.log(item.name);
-		console.log(item);
+		console.log(item.id);
+		console.log(item.market);
+		console.table(item.prices);
 	}
 
 	return history;
 }
 
-priceHistory('feijao');
+priceHistory('arroz');
