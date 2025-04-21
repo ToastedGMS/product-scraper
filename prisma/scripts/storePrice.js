@@ -4,6 +4,7 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 async function storePrice(productDataArray) {
+	const messages = [];
 	try {
 		//check latest price first
 		for (const productData of productDataArray) {
@@ -25,10 +26,13 @@ async function storePrice(productDataArray) {
 					},
 				});
 				console.log(`Stored price for ${productData.id} on database.`);
+				messages.push(`Stored price for ${productData.id} on database.`);
 			} else {
 				console.log(`No price change for ${productData.id}.`);
+				messages.push(`No price change for ${productData.id}.`);
 			}
 		}
+		return messages;
 	} catch (error) {
 		console.error(error);
 	}

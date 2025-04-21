@@ -8,6 +8,8 @@ app.get('/', (req, res) => {
 
 import historyRouter from './routes/priceHistory.js';
 app.use('/history', historyRouter);
+import priceRouter from './routes/storePrice.js';
+app.use('/update', priceRouter);
 
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);

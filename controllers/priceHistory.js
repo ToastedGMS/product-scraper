@@ -18,7 +18,7 @@ async function priceHistory(req, res) {
 
 		return res.send(history);
 	} catch (error) {
-		return res.send('Something went wrong');
+		return res.status(500);
 	}
 }
 

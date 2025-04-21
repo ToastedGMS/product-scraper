@@ -2,11 +2,11 @@ import scrape from '../utils/scrape.js';
 import getProducts from '../prisma/scripts/getProducts.js';
 import storePrice from '../prisma/scripts/storePrice.js';
 
-import getPriceApoio from './apoio.js';
-import getPriceCarrefour from './carrefour.js';
-import getPriceVillefort from './villefort.js';
+import getPriceApoio from '../scrapers/apoio.js';
+import getPriceCarrefour from '../scrapers/carrefour.js';
+import getPriceVillefort from '../scrapers/villefort.js';
 
-async function compareResults() {
+async function storePrices(req, res) {
 	try {
 		const markets = ['Apoio Mineiro', 'Carrefour', 'Villefort'];
 		const types = ['cafe', 'arroz', 'feijao'];
@@ -38,16 +38,24 @@ async function compareResults() {
 			}
 		}
 
+		const messages = [];
 		console.log('Salvando preços de Café:');
-		storePrice(results.cafe);
+		messages.push(await storePrice(results.cafe));
 
 		console.log('Salvando preços de Arroz:');
-		storePrice(results.arroz);
+		messages.push(await storePrice(results.arroz));
 
 		console.log('Salvando preços de Feijão:');
-		storePrice(results.feijao);
+		messages.push(await storePrice(results.feijao));
+
+		res.send({
+			message: 'Database prices updated.',
+			details: messages,
+		});
 	} catch (error) {
 		console.error(error);
+		res.status(500);
 	}
 }
-console.log(await compareResults());
+
+export default storePrices;
