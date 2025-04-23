@@ -27,6 +27,7 @@ async function retrievePriceHistory(type, brand, market, id) {
 		return priceHistory;
 	} catch (error) {
 		console.error(error);
+		throw error;
 	}
 }
 

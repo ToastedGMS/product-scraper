@@ -56,6 +56,7 @@ async function storePrice(productDataArray) {
 		return messages;
 	} catch (error) {
 		console.error(error);
+		throw error;
 	}
 }
 

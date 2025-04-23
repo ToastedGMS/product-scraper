@@ -20,5 +20,6 @@ async function newProduct(productArray) {
 		}
 	} catch (error) {
 		console.error(error);
+		throw error;
 	}
 }

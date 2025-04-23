@@ -16,6 +16,7 @@ async function getProducts(type, market) {
 		return productList;
 	} catch (error) {
 		console.error(error);
+		throw error;
 	}
 }
 
