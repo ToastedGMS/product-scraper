@@ -53,8 +53,10 @@ async function storePrices(req, res) {
 			details: messages,
 		});
 	} catch (error) {
-		console.error(error);
-		res.status(500);
+		console.error('Error storing prices in database:', error);
+		return res
+			.status(500)
+			.json({ error: 'Failed to store prices in database.' });
 	}
 }
 

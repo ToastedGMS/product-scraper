@@ -18,7 +18,8 @@ async function priceHistory(req, res) {
 
 		return res.send(history);
 	} catch (error) {
-		return res.status(500);
+		console.error('Error retrieving price history:', error);
+		return res.status(500).json({ error: 'Failed to retrieve price history.' });
 	}
 }
 
