@@ -1,7 +1,8 @@
 import express from 'express';
 const app = express();
 const port = 3000;
-import cors from 'cors';
+import corsModule from 'cors';
+const cors = corsModule.default || corsModule;
 
 app.use(
 	cors({
@@ -10,10 +11,8 @@ app.use(
 		allowedHeaders: ['Content-Type', 'Authorization'],
 	})
 );
-app.options('*', cors());
 
 app.use(express.json());
-
 app.get('/', (req, res) => {
 	res.send('Hello World!');
 });
