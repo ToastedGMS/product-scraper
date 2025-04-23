@@ -1,9 +1,15 @@
 import retrievePriceHistory from '../prisma/scripts/priceHistory.js';
 
 async function priceHistory(req, res) {
-	const { type, brand, market, id } = req.query;
+	const { type, brand, market, id, quantity } = req.query;
 	try {
-		const history = await retrievePriceHistory(type, brand, market, id);
+		const history = await retrievePriceHistory(
+			type,
+			brand,
+			market,
+			id,
+			quantity
+		);
 
 		if (history.length === 0) {
 			return res.send('No price history found for provided filters.');

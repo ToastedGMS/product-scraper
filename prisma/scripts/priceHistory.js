@@ -1,6 +1,6 @@
 import prisma from '../client.js';
 
-async function retrievePriceHistory(type, brand, market, id) {
+async function retrievePriceHistory(type, brand, market, id, quantity) {
 	try {
 		const filters = {};
 		if (type) filters.type = type;
@@ -20,6 +20,10 @@ async function retrievePriceHistory(type, brand, market, id) {
 						price: true,
 						date: true,
 					},
+					orderBy: {
+						date: 'desc',
+					},
+					take: Number(quantity) || undefined,
 				},
 			},
 		});
