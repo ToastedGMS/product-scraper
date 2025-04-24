@@ -31,7 +31,7 @@ async function storePrice(productDataArray) {
 					`Stored price for ${productData.id} on database (first entry).`
 				);
 			} else {
-				const latestPrice = history[0].prices[0].price;
+				const latestPrice = history[0].prices.at(-1).price;
 				if (latestPrice != productData.Price) {
 					await prisma.price.create({
 						data: {
