@@ -43,3 +43,13 @@ model Price {
 
   @@unique([productId, date]) // one price per product per day
 }
+
+model AverageDailyPrice {
+  id          String      @id @default(cuid())
+  productType String
+  price       Float
+  date        DateTime    @default(now())
+  createdAt   DateTime    @default(now())
+
+  @@unique([productType, date]) // one price average per product-type per day
+}
