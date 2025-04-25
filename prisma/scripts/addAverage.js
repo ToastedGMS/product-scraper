@@ -12,7 +12,7 @@ async function addAveragePrice(type, priceArray) {
 	try {
 		const result = await prisma.averageDailyPrice.create({
 			data: {
-				type: type,
+				productType: type,
 				price: averagePrice,
 				date: today,
 			},
