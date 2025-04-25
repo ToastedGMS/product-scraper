@@ -1,6 +1,7 @@
 import scrape from '../utils/scrape.js';
 import getProducts from '../prisma/scripts/getProducts.js';
 import storePrice from '../prisma/scripts/storePrice.js';
+import addAveragePrice from '../prisma/scripts/addAverage.js';
 
 import getPriceApoio from '../scrapers/apoio.js';
 import getPriceCarrefour from '../scrapers/carrefour.js';
@@ -35,6 +36,19 @@ async function storePrices(req, res) {
 			for (const type of types) {
 				if (!results[type]) results[type] = [];
 				results[type].push(...marketResults[type]);
+			}
+			for (const type of types) {
+				console.log('Storing average price for', type);
+				const priceArray = [];
+
+				for (const result of results[type]) {
+					priceArray.push(result.Price);
+				}
+				if (priceArray.length > 0) {
+					await addAveragePrice(`${type}`, priceArray);
+				} else {
+					console.log(`No prices available for ${type}`);
+				}
 			}
 		}
 
