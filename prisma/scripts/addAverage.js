@@ -1,8 +1,8 @@
 import prisma from '../client.js';
-const today = new Date();
-today.setHours(12, 0, 0, 0); // Normalize time to avoid duplicate prices being stored for the same day
 
 async function addAveragePrice(type, priceArray) {
+	const today = new Date();
+	today.setHours(12, 0, 0, 0); // Normalize time to avoid duplicate prices being stored for the same day
 	if (priceArray.length === 0) {
 		console.log(`No prices available for ${type}`);
 		return;

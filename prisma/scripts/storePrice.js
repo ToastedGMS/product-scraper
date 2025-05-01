@@ -1,10 +1,9 @@
 import prisma from '../client.js';
 import retrievePriceHistory from './priceHistory.js';
 
-const today = new Date();
-today.setHours(12, 0, 0, 0); //normalize time to avoid duplicate prices being stored for the same day
-
 async function storePrice(productDataArray) {
+	const today = new Date();
+	today.setHours(12, 0, 0, 0); //normalize time to avoid duplicate prices being stored for the same day
 	const messages = [];
 	try {
 		for (const productData of productDataArray) {
