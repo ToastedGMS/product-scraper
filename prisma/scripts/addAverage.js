@@ -1,24 +1,31 @@
 import prisma from '../client.js';
 
 async function addAveragePrice(type, priceArray) {
-	const today = new Date();
-	today.setHours(12, 0, 0, 0); // Normalize time to avoid duplicate prices being stored for the same day
 	if (priceArray.length === 0) {
 		console.log(`No prices available for ${type}`);
 		return;
 	}
+
 	const averagePrice =
 		priceArray.reduce((a, b) => a + b, 0) / priceArray.length;
 
 	const roundedPrice = Math.round(averagePrice * 100) / 100;
 
+	// Set start and end of today
+	const startOfDay = new Date();
+	startOfDay.setHours(0, 0, 0, 0);
+
+	const endOfDay = new Date();
+	endOfDay.setHours(23, 59, 59, 999);
+
 	try {
 		// Check if the average price for the product type already exists for today
-		const existingPrice = await prisma.averageDailyPrice.findUnique({
+		const existingPrice = await prisma.averageDailyPrice.findFirst({
 			where: {
-				productType_date: {
-					productType: type,
-					date: today,
+				productType: type,
+				date: {
+					gte: startOfDay,
+					lte: endOfDay,
 				},
 			},
 		});
@@ -29,11 +36,12 @@ async function addAveragePrice(type, priceArray) {
 			);
 			return;
 		}
+
 		const result = await prisma.averageDailyPrice.create({
 			data: {
 				productType: type,
 				price: roundedPrice,
-				date: today,
+				date: new Date(), // Current timestamp
 			},
 		});
 
